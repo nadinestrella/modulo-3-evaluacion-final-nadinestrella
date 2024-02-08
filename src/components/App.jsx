@@ -7,6 +7,7 @@ import Filters from './filters/Filters';
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [filterName, setFilterName] = useState('');
 
   useEffect(() => {
     getDataFromApi().then((cleanData) => {
@@ -14,11 +15,19 @@ function App() {
     });
   }, []);
 
+  const handleFilterName = (value) => {
+    setFilterName(value);
+  };
+
+  const filteredCharacters = characters.filter((character) =>
+    character.name.toLowerCase().includes(filterName)
+  );
+
   return (
     <>
       <h1>Harry Potter </h1>
-      <CharacterList characters={characters} />
-      <Filters />
+      <Filters filterName={filterName} handleFilterName={handleFilterName} />
+      <CharacterList characters={filteredCharacters} />
     </>
   );
 }
