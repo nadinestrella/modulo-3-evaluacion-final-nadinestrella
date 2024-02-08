@@ -2,10 +2,15 @@ import React from 'react';
 import FilterByHouse from './FilterByHouse';
 import FilterByName from './FilterByName';
 
-function Filters({ filterName, handleFilterName }) {
+function Filters({
+  filterName,
+  handleFilterName,
+
+  handleFilterHouse,
+}) {
   return (
     <div>
-      <FilterByHouse />
+      <FilterByHouse handleFilterHouse={handleFilterHouse} />
       <FilterByName
         filterName={filterName}
         handleFilterName={handleFilterName}

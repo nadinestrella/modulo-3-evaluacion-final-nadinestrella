@@ -11,6 +11,7 @@ const getDataFromApi = () => {
           gender: character.gender,
           house: character.house,
           photo: character.image,
+          alternativeNames: character.alternate_names,
         };
       });
       return cleanData;

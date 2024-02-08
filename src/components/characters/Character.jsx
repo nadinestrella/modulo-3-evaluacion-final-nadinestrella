@@ -11,6 +11,7 @@ function Character({ character }) {
       />
       <h3 className="card__title">{character.name}</h3>
       <p className="card__description"> {character.specie}</p>
+      <p>{character.house}</p>
     </div>
   );
 }
