@@ -3,6 +3,12 @@ const getDataFromApi = () => {
     .then((response) => response.json())
     .then((data) => {
       const cleanData = data.map((character) => {
+        let image = character.image;
+
+        if (!image) {
+          image = `https://via.placeholder.com/210x295/ffffff/666666/?text=${character.name}`;
+        }
+
         return {
           id: character.id,
           name: character.name,
@@ -10,7 +16,7 @@ const getDataFromApi = () => {
           status: character.alive,
           gender: character.gender,
           house: character.house,
-          photo: character.image,
+          photo: image,
           alternativeNames: character.alternate_names,
         };
       });
