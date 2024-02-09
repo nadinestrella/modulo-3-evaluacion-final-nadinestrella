@@ -4,6 +4,7 @@ import '../scss/App.scss';
 import getDataFromApi from '../services/api';
 import CharacterList from './characters/CharacterList';
 import Filters from './filters/Filters';
+import Header from './Header';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -25,22 +26,17 @@ function App() {
 
   const filteredCharacters = characters
     .filter((character) => character.name.toLowerCase().includes(filterName))
-    .filter((eachHouse) => {
-      if (filterHouse === 'Gryffindor') {
-        return true;
-      } else {
-        return eachHouse.house[0] === filterHouse;
-      }
-
-      //   return filterHouse === 'Gryffindor'
-      //     ? true
-      //     : eachHouse.house[0] === filterHouse;
-      //
+    .filter((character) => {
+      // if (filterHouse === 'Gryffindor') {
+      //   return true;
+      // } else {
+      return character.house === filterHouse;
+      // }
     });
 
   return (
     <>
-      <h1>Harry Potter </h1>
+      <Header />
       <Filters
         filterName={filterName}
         handleFilterName={handleFilterName}
