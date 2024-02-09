@@ -9,13 +9,13 @@ function Filters({
   handleFilterHouse,
 }) {
   return (
-    <div>
+    <form>
       <FilterByHouse handleFilterHouse={handleFilterHouse} />
       <FilterByName
         filterName={filterName}
         handleFilterName={handleFilterName}
       />
-    </div>
+    </form>
   );
 }
 
