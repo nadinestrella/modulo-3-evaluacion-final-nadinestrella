@@ -25,7 +25,13 @@ function CharacterDetail({ characters }) {
       </p>
 
       <p>{findElement.gender}</p>
-      <p>{findElement.specie}</p>
+      <p>
+        {findElement.specie === 'human' ? (
+          <i className="fa-solid fa-user"></i>
+        ) : (
+          findElement.specie
+        )}
+      </p>
 
       <ul>
         {findElement.alternativeNames.map((name, i) => (
