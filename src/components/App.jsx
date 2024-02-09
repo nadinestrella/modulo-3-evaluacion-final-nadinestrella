@@ -5,6 +5,8 @@ import getDataFromApi from '../services/api';
 import CharacterList from './characters/CharacterList';
 import Filters from './filters/Filters';
 import Header from './Header';
+import { Route, Routes } from 'react-router-dom';
+import CharacterDetail from './characters/CharacterDetail';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -37,12 +39,26 @@ function App() {
   return (
     <>
       <Header />
-      <Filters
-        filterName={filterName}
-        handleFilterName={handleFilterName}
-        handleFilterHouse={handleFilterHouse}
-      />
-      <CharacterList characters={filteredCharacters} />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Filters
+                filterName={filterName}
+                handleFilterName={handleFilterName}
+                handleFilterHouse={handleFilterHouse}
+              />
+              <CharacterList characters={filteredCharacters} />
+            </>
+          }
+        />
+        <Route
+          path="/detail/:id"
+          element={<CharacterDetail characters={characters} />}
+        />
+      </Routes>
     </>
   );
 }
