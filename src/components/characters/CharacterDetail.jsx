@@ -11,33 +11,45 @@ function CharacterDetail({ characters }) {
   }
 
   return (
-    <div>
-      <img src={findElement.photo} alt="" />
-      <h3>{findElement.name}</h3>
-      <p>{findElement.house}</p>
-      <p> {findElement.status} </p>
-      <p>
-        {findElement.status === 'alive' ? (
-          <i className="fa-solid fa-heart-pulse"></i>
-        ) : (
-          <i className="fa-solid fa-cross"></i>
-        )}
-      </p>
+    <div className="detailContainer">
+      <div>
+        <img
+          className="DetailContainer__image"
+          src={findElement.photo}
+          alt=""
+        />
+      </div>
+      <div>
+        <h3>{findElement.name}</h3>
+        <p>{findElement.house}</p>
+        <p>{findElement.gender}</p>
+        <div>
+          <p> {findElement.status} </p>
+          <p>
+            {findElement.status === 'alive' ? (
+              <i className="fa-solid fa-heart-pulse"></i>
+            ) : (
+              <i className="fa-solid fa-cross"></i>
+            )}
+          </p>
+        </div>
+        <p>{findElement.specie}</p>
+        <div>
+          <p>
+            {findElement.specie === 'human' ? (
+              <i className="fa-solid fa-user"></i>
+            ) : (
+              <i class="fa-solid fa-dragon"></i>
+            )}
+          </p>
+        </div>
 
-      <p>{findElement.gender}</p>
-      <p>
-        {findElement.specie === 'human' ? (
-          <i className="fa-solid fa-user"></i>
-        ) : (
-          findElement.specie
-        )}
-      </p>
-
-      <ul>
-        {findElement.alternativeNames.map((name, i) => (
-          <li key={i}> {name}</li>
-        ))}
-      </ul>
+        <ul>
+          {findElement.alternativeNames.map((name, i) => (
+            <li key={i}> {name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

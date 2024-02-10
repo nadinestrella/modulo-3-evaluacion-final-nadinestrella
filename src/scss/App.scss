@@ -15,3 +15,21 @@
     color: rgb(30, 52, 10);
   }
 }
+
+//CHARACTER DETAIL
+
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  background-color: rgb(137, 46, 46);
+  color: white;
+  width: 500px;
+  height: 400px;
+
+  &__image {
+    width: 100px;
+  }
+}

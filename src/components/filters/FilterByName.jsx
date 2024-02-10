@@ -8,7 +8,10 @@ function FilterByName({ filterName, handleFilterName }) {
         type="text"
         placeholder="Harry Potter"
         value={filterName}
-        onChange={(ev) => handleFilterName(ev.target.value)}
+        onChange={(ev) => {
+          ev.preventDefault();
+          handleFilterName(ev.target.value);
+        }}
       />
     </div>
   );
