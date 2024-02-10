@@ -13,9 +13,11 @@ function CharacterList({ characters }) {
   });
 
   return (
-    <section>
-      <h2>Character List</h2>
-      <ul>{renderCharacters}</ul>
+    <section className="list">
+      <h2 className="list__title">Character List</h2>
+      <div className="list__grid">
+        <ul className="list__grid--ul">{renderCharacters}</ul>
+      </div>
     </section>
   );
 }

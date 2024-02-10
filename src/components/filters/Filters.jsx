@@ -9,12 +9,12 @@ function Filters({
   handleFilterHouse,
 }) {
   return (
-    <form>
-      <FilterByHouse handleFilterHouse={handleFilterHouse} />
+    <form className="filters">
       <FilterByName
         filterName={filterName}
         handleFilterName={handleFilterName}
       />
+      <FilterByHouse handleFilterHouse={handleFilterHouse} />
     </form>
   );
 }

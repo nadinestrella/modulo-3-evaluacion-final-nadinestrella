@@ -2,8 +2,8 @@ import React from 'react';
 
 function Header({ characters }) {
   return (
-    <header>
-      <img src="/images/download.png" alt="" />
+    <header className="header">
+      <img className="header__title" src="/images/download.png" alt="title" />
     </header>
   );
 }
