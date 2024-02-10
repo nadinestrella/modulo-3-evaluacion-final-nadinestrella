@@ -5,7 +5,7 @@ function CharacterList({ characters }) {
   const renderCharacters = characters.map((character) => {
     return (
       <li key={character.id} className="card">
-        <Link to={`/detail/${character.id}`}>
+        <Link className="card__link" to={`/detail/${character.id}`}>
           <Character character={character} />
         </Link>
       </li>

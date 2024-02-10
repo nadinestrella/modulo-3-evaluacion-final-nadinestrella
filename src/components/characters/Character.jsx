@@ -7,9 +7,10 @@ function Character({ character }) {
         alt="Foto de personaje"
         title="Foto de personaje"
       />
-      <h3 className="card__title">{character.name}</h3>
-      <p className="card__description"> {character.specie}</p>
-      <p>{character.house}</p>
+      <div className="card__containerText">
+        <h3>{character.name}</h3>
+        <p> {character.specie}</p>
+      </div>
     </div>
   );
 }

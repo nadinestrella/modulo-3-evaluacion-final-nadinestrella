@@ -14,12 +14,12 @@ function CharacterDetail({ characters }) {
     <div className="detailContainer">
       <div>
         <img
-          className="DetailContainer__image"
+          className="detailContainer__image"
           src={findElement.photo}
           alt=""
         />
       </div>
-      <div>
+      <div className="detailContainer__text">
         <h3>{findElement.name}</h3>
         <p>{findElement.house}</p>
         <p>{findElement.gender}</p>

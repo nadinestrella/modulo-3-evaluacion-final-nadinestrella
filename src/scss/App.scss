@@ -1,5 +1,9 @@
 @import 'core/reset';
 
+body {
+  background-color: rgb(172, 168, 168);
+}
+
 //HEADER
 
 .header {
@@ -19,12 +23,15 @@
     display: flex;
     justify-content: center;
     font-size: 30px;
+    font-size: 2.8rem;
+    padding-bottom: 20px;
   }
   &__grid--ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 10px;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -36,22 +43,29 @@
 }
 
 .card {
-  border: 2px solid rgb(93, 20, 20);
-  width: 200px;
+  width: 150px;
+  height: 260px;
+  overflow: hidden;
+  background-color: rgb(177, 151, 5);
+  border-radius: 5px;
+
+  &__link {
+    text-decoration: none;
+  }
 
   &__img {
-    max-width: 200px;
+    width: 100%;
+    height: 200px;
 
-    align-content: center;
+    margin: 0 auto;
   }
-  &__title {
-    color: rgb(30, 52, 10);
-  }
-  &__description {
-    color: rgb(30, 52, 10);
+
+  &__containerText {
+    color: white;
+    font-size: 13px;
+    padding: 5px;
   }
 }
-
 //CHARACTER
 
 //FILTERS
@@ -62,7 +76,8 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding-top: 30px;
+  padding: 30px;
+  font-size: 1.8rem;
   &__byHouse {
     display: flex;
     gap: 20px;
@@ -80,11 +95,14 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  align-items: center;
   gap: 30px;
   background-color: rgb(137, 46, 46);
   color: white;
   width: 500px;
   height: 400px;
+  font-size: 1.8 rem;
+  margin: 0 auto;
 
   &__image {
     width: 100px;
