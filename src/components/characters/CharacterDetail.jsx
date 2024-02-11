@@ -8,14 +8,14 @@ function CharacterDetail({ characters }) {
   const findElement = characters.find((item) => item.id === id);
 
   if (!findElement) {
-    return <div>'No se encontró el personaje con el ID especificado'</div>;
+    return <div>I couldn't find a matching character</div>;
   }
 
   return (
     <div className="detailContainer">
       <Link className="detailContainer__link" to="/">
         <p>
-          <i class="fa-solid fa-arrow-left"></i> Back
+          <i className="fa-solid fa-arrow-left"></i> Back
         </p>
       </Link>
       <div className="detailContainer__image">
@@ -46,17 +46,15 @@ function CharacterDetail({ characters }) {
             {findElement.specie === 'human' ? (
               <i className="fa-solid fa-user"></i>
             ) : (
-              <i class="fa-solid fa-dragon"></i>
+              <i className="fa-solid fa-dragon"></i>
             )}
           </p>
         </div>
 
         <ul className="detailContainer__text--ul">
-          {' '}
           Alternative Names:
           {findElement.alternativeNames.map((name, i) => (
             <li className="detailContainer__li" key={i}>
-              {' '}
               {name}
             </li>
           ))}

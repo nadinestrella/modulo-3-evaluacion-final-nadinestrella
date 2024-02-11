@@ -10,8 +10,12 @@ function FilterByName({ filterName, handleFilterName }) {
         placeholder="Harry Potter"
         value={filterName}
         onChange={(ev) => {
-          ev.preventDefault();
           handleFilterName(ev.target.value);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+          }
         }}
       />
     </div>

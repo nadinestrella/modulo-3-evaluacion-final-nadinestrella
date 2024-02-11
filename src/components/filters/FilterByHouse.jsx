@@ -7,7 +7,7 @@ function FilterByHouse({ handleFilterHouse }) {
         By House
       </label>
       <select
-        name="house"
+        id="house"
         onChange={(ev) => handleFilterHouse(ev.target.value)}
         className="filters__byHouse--select"
       >
