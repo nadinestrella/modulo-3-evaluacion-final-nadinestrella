@@ -82,6 +82,7 @@ body {
       width: 200px;
       height: 25px;
       color: white;
+      outline: none;
     }
   }
   &__byName {
@@ -96,6 +97,7 @@ body {
       width: 200px;
       height: 25px;
       color: white;
+      outline: none;
     }
   }
 }
@@ -108,18 +110,33 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  gap: 70px;
+  gap: 20px;
   background-color: rgb(137, 46, 46);
   color: white;
-  max-width: 500px;
+  max-width: 250px;
   height: fit-content;
   font-size: 1.8 rem;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
+  position: relative;
+  top: 80px;
+  @media (min-width: 768px) {
+    gap: 70px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -20px;
+    right: 0;
+  }
 
   @media (min-width: 768px) {
     flex-direction: row;
+    max-width: 500px;
   }
 
   &__image {

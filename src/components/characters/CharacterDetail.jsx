@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
 function CharacterDetail({ characters }) {
   const { id } = useParams();
 
@@ -11,6 +13,11 @@ function CharacterDetail({ characters }) {
 
   return (
     <div className="detailContainer">
+      <Link className="detailContainer__link" to="/">
+        <p>
+          <i class="fa-solid fa-arrow-left"></i> Back
+        </p>
+      </Link>
       <div className="detailContainer__image">
         <img
           className="detailContainer__image--img"
