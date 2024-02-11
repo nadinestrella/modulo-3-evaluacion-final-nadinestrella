@@ -14,7 +14,6 @@ function CharacterList({ characters }) {
 
   return (
     <section className="list">
-      <h2 className="list__title">Character List</h2>
       <div className="list__grid">
         <ul className="list__grid--ul">{renderCharacters}</ul>
       </div>

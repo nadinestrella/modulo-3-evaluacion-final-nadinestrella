@@ -4,27 +4,26 @@ function CharacterDetail({ characters }) {
   const { id } = useParams();
 
   const findElement = characters.find((item) => item.id === id);
-  //   const params = useParams();
-  //   const characterSelected = characters(params.id);
+
   if (!findElement) {
-    return <div>No se encontró el personaje con el ID especificado.</div>;
+    return <div>'No se encontró el personaje con el ID especificado'</div>;
   }
 
   return (
     <div className="detailContainer">
-      <div>
+      <div className="detailContainer__image">
         <img
-          className="detailContainer__image"
+          className="detailContainer__image--img"
           src={findElement.photo}
           alt=""
         />
       </div>
       <div className="detailContainer__text">
         <h3>{findElement.name}</h3>
-        <p>{findElement.house}</p>
-        <p>{findElement.gender}</p>
-        <div>
-          <p> {findElement.status} </p>
+        <p>House: {findElement.house}</p>
+        <p>Gender: {findElement.gender}</p>
+        <div className="detailContainer__text--status">
+          <p>Status: {findElement.status} </p>
           <p>
             {findElement.status === 'alive' ? (
               <i className="fa-solid fa-heart-pulse"></i>
@@ -33,8 +32,9 @@ function CharacterDetail({ characters }) {
             )}
           </p>
         </div>
-        <p>{findElement.specie}</p>
-        <div>
+
+        <div className="detailContainer__text--specie">
+          <p>Specie: {findElement.specie}</p>
           <p>
             {findElement.specie === 'human' ? (
               <i className="fa-solid fa-user"></i>
@@ -44,9 +44,14 @@ function CharacterDetail({ characters }) {
           </p>
         </div>
 
-        <ul>
+        <ul className="detailContainer__text--ul">
+          {' '}
+          Alternative Names:
           {findElement.alternativeNames.map((name, i) => (
-            <li key={i}> {name}</li>
+            <li className="detailContainer__li" key={i}>
+              {' '}
+              {name}
+            </li>
           ))}
         </ul>
       </div>

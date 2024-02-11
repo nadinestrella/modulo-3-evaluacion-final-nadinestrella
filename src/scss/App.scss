@@ -19,13 +19,6 @@ body {
 //CHARACTER LIST
 
 .list {
-  &__title {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-size: 2.8rem;
-    padding-bottom: 20px;
-  }
   &__grid--ul {
     list-style: none;
     display: grid;
@@ -56,7 +49,6 @@ body {
   &__img {
     width: 100%;
     height: 200px;
-
     margin: 0 auto;
   }
 
@@ -66,7 +58,6 @@ body {
     padding: 5px;
   }
 }
-//CHARACTER
 
 //FILTERS
 
@@ -78,13 +69,34 @@ body {
   gap: 15px;
   padding: 30px;
   font-size: 1.8rem;
+
   &__byHouse {
     display: flex;
     gap: 20px;
+    &--label {
+      color: white;
+    }
+    &--select {
+      background-color: rgb(172, 168, 168);
+      border: 2px solid rgb(177, 151, 5);
+      width: 200px;
+      height: 25px;
+      color: white;
+    }
   }
   &__byName {
     display: flex;
     gap: 20px;
+    &--label {
+      color: white;
+    }
+    &--input {
+      background-color: rgb(172, 168, 168);
+      border: 2px solid rgb(177, 151, 5);
+      width: 200px;
+      height: 25px;
+      color: white;
+    }
   }
 }
 
@@ -92,19 +104,49 @@ body {
 
 .detailContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 70px;
   background-color: rgb(137, 46, 46);
   color: white;
-  width: 500px;
-  height: 400px;
+  max-width: 500px;
+  height: fit-content;
   font-size: 1.8 rem;
   margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 
   &__image {
-    width: 100px;
+    &--img {
+      width: auto;
+      height: 250px;
+      border-radius: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    text-wrap: nowrap;
+
+    &--status {
+      display: flex;
+      gap: 5px;
+    }
+    &--specie {
+      display: flex;
+      gap: 5px;
+    }
+    &--ul {
+      list-style: none;
+    }
+  }
+  &__li {
+    padding-left: 10px;
   }
 }

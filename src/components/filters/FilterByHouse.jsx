@@ -3,13 +3,13 @@ import React from 'react';
 function FilterByHouse({ handleFilterHouse }) {
   return (
     <div className="filters__byHouse">
-      <label htmlFor="house" className="filters__byHouse__label">
+      <label htmlFor="house" className="filters__byHouse--label">
         By House
       </label>
       <select
         name="house"
         onChange={(ev) => handleFilterHouse(ev.target.value)}
-        className="filters__byHouse__select"
+        className="filters__byHouse--select"
       >
         <option value="Gryffindor">Gryffindor</option>
         <option value="Ravenclaw">Ravenclaw</option>
