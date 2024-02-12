@@ -1,16 +1,47 @@
-# React + Vite
+# Evaluación Final - Módulo 3 - Adalab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene la evaluación final del Módulo 3 del curso de Adalab. Se trata de un proyecto desarrollado por [Nadine Estrella](https://beta.adalab.es/modulo-3-evaluacion-final-nadinestrella/).
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto consiste en un buscador web de personajes de la famosa saga Harry Potter 🧙 🧙 🧙, donde podras encontrar gran cantidad de informacion.
+Hay tres tipo de filtros:
 
-APP
+- Por personaje
+- Por Casa
+- Por Genero
+  Ademas de un boton de reset para dejar la pagina como al inicio.
+  Tambien se puede entrar en el detalle de cada personaje clicando sobre su tarjeta.
 
-1. FILTERS
-2. CHARACTER LIST
-   2.1 CHARACTER
+## Tecnologías Utilizadas
 
-3. CHARACTER DETAIL
+- HTML5
+- SASS
+- React
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+
+- git clone https://github.com/Adalab/modulo-3-evaluacion-final-nadinestrella.git
+
+2. Ejecuta el nodeModules: npm install
+3. Inicializa la pagina con el comando npm run dev y pulsa sobre el enlace Loca
+
+## Contribuciones
+
+Las contribuciones son bienvenidas.🪄🪄🪄 Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una rama para tu funcionalidad: `git checkout -b mi-funcionalidad`.
+3. Realiza tus cambios y haz commits: `git commit -am 'Agrega mi funcionalidad'`.
+4. Empuja tu rama: `git push origin mi-funcionalidad`.
+5. Envía un pull request. 😊
+
+## Licencia
+
+Este proyecto está bajo la Licencia [MIT](https://opensource.org/licenses/MIT).
+
+---
+
+¡Gracias por tu interés en este proyecto!

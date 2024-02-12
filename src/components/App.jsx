@@ -36,6 +36,8 @@ function App() {
     setFilterGender(value);
   };
 
+  //SORT, NAME, HOUSE AND GENDER FILTERS
+
   const filteredCharacters = characters
     .sort((a, b) => a.name.localeCompare(b.name))
     .filter((character) =>
