@@ -8,7 +8,7 @@ function CharacterDetail({ characters }) {
   const findElement = characters.find((item) => item.id === id);
 
   if (!findElement) {
-    return <div>I couldn't find a matching character</div>;
+    return <div className="error">We couldn't find a matching character</div>;
   }
 
   return (
