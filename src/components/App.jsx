@@ -12,6 +12,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState('');
   const [filterHouse, setFilterHouse] = useState('Gryffindor');
+  const [filterGender, setFilterGender] = useState('');
 
   useEffect(() => {
     getDataFromApi().then((cleanData) => {
@@ -19,21 +20,35 @@ function App() {
     });
   }, []);
 
+  const resetButon = () => {
+    setFilterName('');
+    setFilterHouse('Gryffindor');
+    setFilterGender('');
+  };
+
   const handleFilterName = (value) => {
     setFilterName(value);
   };
   const handleFilterHouse = (value) => {
     setFilterHouse(value);
   };
+  const handleFilterGender = (value) => {
+    setFilterGender(value);
+  };
 
   const filteredCharacters = characters
-    .filter((character) => character.name.toLowerCase().includes(filterName))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .filter((character) => character.name.toLowerCase().startsWith(filterName))
     .filter((character) => {
-      // if (filterHouse === 'Gryffindor') {
-      //   return true;
-      // } else {
       return character.house === filterHouse;
-      // }
+    })
+    .filter((character) => {
+      if (filterGender === 'male') {
+        return character.gender === 'male';
+      } else if (filterGender === 'female') {
+        return character.gender === 'female';
+      }
+      return true;
     });
 
   return (
@@ -48,7 +63,11 @@ function App() {
               <Filters
                 filterName={filterName}
                 handleFilterName={handleFilterName}
+                filterHouse={filterHouse}
                 handleFilterHouse={handleFilterHouse}
+                handleFilterGender={handleFilterGender}
+                filterGender={filterGender}
+                resetButon={resetButon}
               />
               <CharacterList characters={filteredCharacters} />
             </>

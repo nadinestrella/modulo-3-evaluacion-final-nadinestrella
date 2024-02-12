@@ -14,21 +14,11 @@ const getDataFromApi = () => {
 
         //HUMAN
 
-        //const human = character.species ? character.species : 'human';
-
         let specie = character.species;
 
         if (character.species === 'human') {
           ('human');
         } else character.especies;
-
-        // death <i class="fa-solid fa-cross"></i>
-        //alive <i class="fa-solid fa-heart-pulse"></i>
-        //men <i class="fa-solid fa-person"></i>
-        //woman <i class="fa-solid fa-person-dress"></i>
-        // arrow <i class="fa-solid fa-arrow-left"></i>
-        //human <i class="fa-solid fa-user"></i>
-        //no human<i class="fa-solid fa-dragon"></i>
 
         return {
           id: character.id,

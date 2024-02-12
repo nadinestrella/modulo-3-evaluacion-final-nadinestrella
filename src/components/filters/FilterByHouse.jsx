@@ -1,12 +1,13 @@
 import React from 'react';
 
-function FilterByHouse({ handleFilterHouse }) {
+function FilterByHouse({ handleFilterHouse, filterHouse }) {
   return (
     <div className="filters__byHouse">
       <label htmlFor="house" className="filters__byHouse--label">
         By House
       </label>
       <select
+        value={filterHouse}
         id="house"
         onChange={(ev) => handleFilterHouse(ev.target.value)}
         className="filters__byHouse--select"
