@@ -38,7 +38,9 @@ function App() {
 
   const filteredCharacters = characters
     .sort((a, b) => a.name.localeCompare(b.name))
-    .filter((character) => character.name.toLowerCase().startsWith(filterName))
+    .filter((character) =>
+      character.name.toLowerCase().startsWith(filterName.toLowerCase())
+    )
     .filter((character) => {
       return character.house === filterHouse;
     })

@@ -6,8 +6,8 @@ function FilterByGender({ handleFilterGender, filterGender }) {
   };
 
   return (
-    <div>
-      <label> By Gender</label>
+    <div className="filters__byGender">
+      <label className="filters__byGender--label"> By Gender</label>
 
       <input
         type="radio"
@@ -15,8 +15,9 @@ function FilterByGender({ handleFilterGender, filterGender }) {
         value="female"
         onChange={handleRadio}
         checked={filterGender === 'female'}
+        className="filters__byGender--input"
       />
-      <label>Female </label>
+      <label className="filters__byGender--label">Female </label>
 
       <input
         type="radio"
@@ -24,8 +25,9 @@ function FilterByGender({ handleFilterGender, filterGender }) {
         value="male"
         onChange={handleRadio}
         checked={filterGender === 'male'}
+        className="filters__byGender--input"
       />
-      <label>Male </label>
+      <label className="filters__byGender--label">Male </label>
     </div>
   );
 }
