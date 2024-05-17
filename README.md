@@ -38,10 +38,6 @@ Las contribuciones son bienvenidas.🪄🪄🪄 Si deseas contribuir a este proy
 4. Empuja tu rama: `git push origin mi-funcionalidad`.
 5. Envía un pull request. 😊
 
-## Licencia
-
-Este proyecto está bajo la Licencia [MIT](https://opensource.org/licenses/MIT).
-
 ---
 
 ¡Gracias por tu interés en este proyecto!
